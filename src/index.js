@@ -5,7 +5,7 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Topbar from './components/appBar/index.js'
+import Topbar from './components/appBar/index.js';
 
 
 

@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function TppBar() {
+export default function TopBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
