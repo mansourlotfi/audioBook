@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.scss';
-import Button from '@material-ui/core/Button';
-
+import Topbar from './components/appBar/index.js'
 
 function App() {
   return (
     <div className="App">
-<Button variant="contained" color="primary">
-      Hello World
-    </Button>
     </div>
   );
 }
