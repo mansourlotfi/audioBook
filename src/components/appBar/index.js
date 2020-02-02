@@ -41,15 +41,6 @@ const useStyles = makeStyles(theme => ({
       width: 'auto',
     },
   },
-  searchIcon: {
-    width: theme.spacing(7),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   inputRoot: {
     color: 'inherit',
   },
@@ -166,6 +157,8 @@ export default function TopBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            // hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+            onClick={()=>console.warn("clicked!!!!!!!!!!!")}
           >
             <MenuIcon />
           </IconButton>

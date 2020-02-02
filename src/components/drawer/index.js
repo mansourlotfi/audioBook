@@ -8,6 +8,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import Topbar from '../appBar/index.js';
+
 
 
 const useStyles = makeStyles({
@@ -53,6 +55,7 @@ export default function AppDrawer() {
 
   return (
     <div>
+      <Topbar click= {null} />
       <Button onClick={toggleDrawer('right', true)}>Open </Button>
       <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
         {sideList('right')}

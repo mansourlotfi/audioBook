@@ -5,7 +5,6 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Topbar from './components/appBar/index.js';
 import AppDrawer from './components/drawer/index.js';
 
 
@@ -15,7 +14,6 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
     <Router history={hist}>
-      <Topbar />
       <AppDrawer />
       <Switch>
         <Route path="/" component={App} />
