@@ -20,6 +20,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
+import CustomizedSwitches from '../switch'
 import './drawer.scss';
 
 const drawerWidth = 240;
@@ -121,12 +122,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function PersistentDrawerLeft() {
   const mystyle = {
-    color: "white",
     padding: "10px",
     fontFamily: "Arial",
     display: "flex",
-    marginLeft: "auto"
-  };
+    marginLeft: "auto",
+    alignItems: 'center'
+    }
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -175,8 +176,11 @@ export default function PersistentDrawerLeft() {
             />
           </div>
           <div style={mystyle}>
-          <Button >sign up</Button>
-          <Button >login</Button>
+            <div style={{width : 200, marginLeft : 10,atextAlign: 'center'}}>
+            <CustomizedSwitches />
+            </div>
+          <Button color="inherit">sign up</Button>
+          <Button color="inherit">login</Button>
           </div>
               
         </Toolbar>
