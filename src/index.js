@@ -1,27 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import AppDrawer from './components/drawer/index.js';
+import Home from './views/home.js';
 
 
-
-
-
-
-const hist = createBrowserHistory();
 
 ReactDOM.render(
-    <Router history={hist}>
-      <AppDrawer />
-      <Switch>
-        <Route path="/" component={App} />
-        <Redirect from="/" to="" />
-      </Switch>
-    </Router>,
+  <Router>
+    <AppDrawer />
+    <App />
+  </Router>,
+    
     document.getElementById("root")
   );
 
