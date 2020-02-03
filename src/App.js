@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link } from "react-router-dom";
 import './App.scss';
 import Home from './views/home.js';
 
