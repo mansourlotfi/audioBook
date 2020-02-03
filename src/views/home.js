@@ -6,7 +6,9 @@ function Home() {
   const bodyStyle = {
     backgroundImage: "url(" + Bg + ")",
      width: '100%',
-      height: '900px'
+      height: '900px',
+      // paddingTop : '0px',
+      // marginTop: '0px'
   }
     return (
       <div style={bodyStyle}>

@@ -189,6 +189,7 @@ export default function PersistentDrawerLeft() {
         className={classes.drawer}
         variant="persistent"
         anchor="left"
+        role="presentation"
         open={open}
         classes={{
           paper: classes.drawerPaper,
