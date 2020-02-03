@@ -1,9 +1,16 @@
 import React from "react";
+import Bg from '../assets/bg.jpg'
 
 function Home() {
+
+  const bodyStyle = {
+    backgroundImage: "url(" + Bg + ")",
+     width: '100%',
+      height: '900px'
+  }
     return (
-      <div>
-        <h2>Home asd</h2>
+      <div style={bodyStyle}>
+        <h2 style={{color:'white', textAlign:'center'}}>Home asdasdasd</h2>
       </div>
     );
   }
