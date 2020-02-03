@@ -19,7 +19,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
-
+import Button from '@material-ui/core/Button';
+import './drawer.scss';
 
 const drawerWidth = 240;
 
@@ -115,10 +116,17 @@ const useStyles = makeStyles(theme => ({
         width: 200,
       },
     },
-  },
+  }
 }));
 
 export default function PersistentDrawerLeft() {
+  const mystyle = {
+    color: "white",
+    padding: "10px",
+    fontFamily: "Arial",
+    display: "flex",
+    marginLeft: "auto"
+  };
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -166,6 +174,11 @@ export default function PersistentDrawerLeft() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          <div style={mystyle}>
+          <Button >sign up</Button>
+          <Button >login</Button>
+          </div>
+              
         </Toolbar>
       </AppBar>
       <Drawer
@@ -184,7 +197,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['page 1', 'page 2', 'page 3', 'page4'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
