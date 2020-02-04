@@ -9,12 +9,12 @@ import EntryPage from './views/entryPage/index.js';
 class App extends Component {
 	render() {
 		return (
-			<Router>
+			<div>
 				<Route path="/" exact component={Home} />
 				<Route path="/about" component={About} />
 				<Route path="/dashboard" component={Dashboard} />
 				<Route path="/entrypage" component={EntryPage} />
-			</Router>
+			</div>
 		);
 	}
 }
