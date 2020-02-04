@@ -1,16 +1,8 @@
-import React from 'react';
-import Bg from '../../assets/home/bg3.jpg'
-
-
-const bodyStyle = {
-    backgroundImage: "url(" + Bg + ")",
-      height: '900px',
-  }
-export default class Login extends React.Component {
-    
+import React from 'react'
+export default class SignUp extends React.Component {
     render() {
       return (
-        <div className="App" style={bodyStyle}>
+        <div className="App">
           
           <div className="input-container">
             <input type="text" placeholder="Username"/>
@@ -22,7 +14,7 @@ export default class Login extends React.Component {
             <i class="zmdi zmdi-lock zmdi-hc-lg"></i>
           </div>
           
-          <button type="submit">Log In</button>
+          <button type="submit">sign up</button>
         </div>
       )
     }
