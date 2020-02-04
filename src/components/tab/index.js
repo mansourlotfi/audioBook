@@ -73,7 +73,7 @@ export default function ScrollableTabsButtonForce() {
 					aria-label="scrollable force tabs example"
 					centered
 				>
-					<Tab label="Activity" icon={<PhoneIcon />} {...a11yProps(0)} />
+					<Tab label="Activity as a Freelancer" icon={<PhoneIcon />} {...a11yProps(0)} />
 					<Tab label="Inbox" icon={<HelpIcon />} {...a11yProps(1)} />
 					<Tab label="Notification" icon={<PersonPinIcon />} {...a11yProps(2)} />
 					<Tab label="Discord" icon={<HelpIcon />} {...a11yProps(3)} />
