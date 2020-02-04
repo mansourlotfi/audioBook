@@ -20,7 +20,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
-import CustomizedSwitches from '../switch'
+import CustomizedSwitches from '../switch';
+import { Link } from "react-router-dom";
+
 import './drawer.scss';
 
 const drawerWidth = 240;
@@ -202,12 +204,26 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['page 1', 'page 2', 'page 3', 'page4'].map((text, index) => (
+          {/* {['page 1', 'page 2', 'page 3', 'page4'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-          ))}
+          ))} */}
+
+<Link to='/'>
+<ListItem button>
+<ListItemText primary='home' />
+</ListItem>
+</Link>
+
+<Link to='/about'>
+<ListItem button>
+<ListItemText primary='about' />
+</ListItem>
+</Link>
+
+
         </List>
 
       </Drawer>
