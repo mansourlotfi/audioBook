@@ -181,8 +181,7 @@ export default function PersistentDrawerLeft() {
             <div style={{width : 200, marginLeft : 10,atextAlign: 'center'}}>
             <CustomizedSwitches />
             </div>
-          <Button color="inherit" href="/signup">sign up</Button>
-          <Button color="inherit" href="/login">login</Button>
+          <Button color="inherit" href="/entrypage">login/sign up</Button>
           </div>
               
         </Toolbar>
