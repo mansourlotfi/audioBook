@@ -179,7 +179,7 @@ export default function PersistentDrawerLeft() {
 						<div style={{ width: 200, marginLeft: 10, atextAlign: 'center' }}>
 							<CustomizedSwitches />
 						</div>
-						<Button color="inherit" href="/entrypage">
+						<Button color="inherit" href="/">
 							login/sign up
 						</Button>
 					</div>
@@ -212,7 +212,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           ))} */}
 
-					<Link to="/">
+					<Link to="/home">
 						<ListItem button>
 							<ListItemIcon>
 								<InboxIcon />
@@ -230,7 +230,7 @@ export default function PersistentDrawerLeft() {
 						</ListItem>
 					</Link>
 
-					<Link to="/About">
+					<Link to="/about">
 						<ListItem button>
 							<ListItemIcon>
 								<InboxIcon />
