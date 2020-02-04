@@ -181,8 +181,8 @@ export default function PersistentDrawerLeft() {
             <div style={{width : 200, marginLeft : 10,atextAlign: 'center'}}>
             <CustomizedSwitches />
             </div>
-          <Button color="inherit">sign up</Button>
-          <Button color="inherit">login</Button>
+          <Button color="inherit" href="/signup">sign up</Button>
+          <Button color="inherit" href="/login">login</Button>
           </div>
               
         </Toolbar>
@@ -213,13 +213,24 @@ export default function PersistentDrawerLeft() {
 
 <Link to='/'>
 <ListItem button>
+<ListItemIcon><InboxIcon /></ListItemIcon>
 <ListItemText primary='home' />
 </ListItem>
 </Link>
 
-<Link to='/about'>
+<Link to='/dashboard'>
 <ListItem button>
-<ListItemText primary='about' />
+<ListItemIcon><InboxIcon /></ListItemIcon>
+<ListItemText primary='Dashboard' />
+</ListItem>
+</Link>
+
+
+
+<Link to='/About'>
+<ListItem button>
+<ListItemIcon><InboxIcon /></ListItemIcon>
+<ListItemText primary='About' />
 </ListItem>
 </Link>
 
