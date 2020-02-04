@@ -5,7 +5,6 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import AppDrawer from './components/drawer/index.js';
-import Home from './views/home.js';
 
 
 

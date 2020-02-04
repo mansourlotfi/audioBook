@@ -21,11 +21,6 @@ class App extends Component {
                <Route path="/dashboard" component={Dashboard}/>
                <Route path="/entrypage" component={EntryPage}/>
 
-
-
-
-
-        
       </div>
     );
   }
