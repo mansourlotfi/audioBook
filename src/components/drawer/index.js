@@ -21,6 +21,9 @@ import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
 import CustomizedSwitches from '../switch';
 import { Link } from "react-router-dom";
+import App from '../../App.js';
+
+
 
 import './drawer.scss';
 
@@ -241,8 +244,7 @@ export default function PersistentDrawerLeft() {
           [classes.contentShift]: open,
         })}
       >
-        <div className={classes.drawerHeader} />
-
+<App />
       </main>
     </div>
   );
