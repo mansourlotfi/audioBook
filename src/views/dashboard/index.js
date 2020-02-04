@@ -1,5 +1,5 @@
 import React from 'react';
-import TabPanel from '../components/tab';
+import TabPanel from '../../components/tab';
 function Dashboard() {
 	return (
 		<div>
