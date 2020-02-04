@@ -194,6 +194,7 @@ export default function PersistentDrawerLeft() {
         anchor="left"
         role="presentation"
         open={open}
+        transitionDuration={500}
         classes={{
           paper: classes.drawerPaper,
         }}
@@ -244,7 +245,7 @@ export default function PersistentDrawerLeft() {
           [classes.contentShift]: open,
         })}
       >
-<App />
+      <App />
       </main>
     </div>
   );
