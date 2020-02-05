@@ -21,7 +21,6 @@ import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
 import CustomizedSwitches from '../switch';
 import { Link } from 'react-router-dom';
-import App from '../../App.js';
 
 import './drawer.scss';
 
@@ -246,7 +245,7 @@ export default function PersistentDrawerLeft(props) {
 				})}
 				//i render app component here so shift content work fine but after separate layout configuration its a problem
 			>
-				{/* {this.props.children} */}
+				{props.children}
 			</main>
 		</div>
 	);

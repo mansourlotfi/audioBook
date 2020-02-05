@@ -5,8 +5,7 @@ class HomeLayout extends Component {
 	render() {
 		return (
 			<div>
-				<AppDrawer />
-				{this.props.children}
+				<AppDrawer>{this.props.children}</AppDrawer>
 			</div>
 		);
 	}
