@@ -9,6 +9,7 @@ import EntryPage from './views/entryPage/index.js';
 //importing layout
 import HomeLayout from './views/layouts/homeLayout';
 import AuthLayout from './views/layouts/authLayout';
+import RtlLayout from './views/layouts/rtlLayout';
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
 	<Route
@@ -35,10 +36,8 @@ class App extends Component {
 						<AppRoute path="/dashboard" exact layout={HomeLayout} component={Dashboard} />
 						<AppRoute path="/about" exact layout={HomeLayout} component={About} />
 
-						{/* <Route path="/" exact component={EntryPage} />
-				<Route path="/home" exact component={Home} />
-				<Route path="/dashboard" component={Dashboard} />
-				<Route path="/about" component={About} /> */}
+						{/* rtlLayout */}
+						<AppRoute path="/rtl" exact layout={RtlLayout} component={Home} />
 					</Switch>
 				</Router>
 			</div>
