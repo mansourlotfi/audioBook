@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function PersistentDrawerLeft() {
+export default function PersistentDrawerLeft(props) {
 	const mystyle = {
 		padding: '10px',
 		fontFamily: 'Arial',
@@ -244,8 +244,9 @@ export default function PersistentDrawerLeft() {
 				className={clsx(classes.content, {
 					[classes.contentShift]: open
 				})}
+				//i render app component here so shift content work fine but after separate layout configuration its a problem
 			>
-				<App />
+				{/* {this.props.children} */}
 			</main>
 		</div>
 	);
