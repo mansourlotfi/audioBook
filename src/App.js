@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Home from './views/home.js';
 import About from './views/about.js';
@@ -26,18 +26,20 @@ class App extends Component {
 		return (
 			<div>
 				<Router>
-					{/* authLayout */}
-					<AppRoute path="/" exact layout={AuthLayout} component={EntryPage} />
+					<Switch>
+						{/* authLayout */}
+						<AppRoute path="/" exact layout={AuthLayout} component={EntryPage} />
 
-					{/* homelayout */}
-					<AppRoute path="/home" exact layout={HomeLayout} component={Home} />
-					<AppRoute path="/dashboard" exact layout={HomeLayout} component={Dashboard} />
-					<AppRoute path="/about" exact layout={HomeLayout} component={About} />
+						{/* homelayout */}
+						<AppRoute path="/home" exact layout={HomeLayout} component={Home} />
+						<AppRoute path="/dashboard" exact layout={HomeLayout} component={Dashboard} />
+						<AppRoute path="/about" exact layout={HomeLayout} component={About} />
 
-					{/* <Route path="/" exact component={EntryPage} />
+						{/* <Route path="/" exact component={EntryPage} />
 				<Route path="/home" exact component={Home} />
 				<Route path="/dashboard" component={Dashboard} />
 				<Route path="/about" component={About} /> */}
+					</Switch>
 				</Router>
 			</div>
 		);

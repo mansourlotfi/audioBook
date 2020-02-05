@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import AppDrawer from '../../components/drawer';
 
 class HomeLayout extends Component {
 	render() {
-		return <div>{this.props.children}</div>;
+		return (
+			<div>
+				<AppDrawer />
+				{this.props.children}
+			</div>
+		);
 	}
 }
 
