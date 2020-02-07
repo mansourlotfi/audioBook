@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { SocialMediaIconsReact } from 'social-media-icons-react';
+
 import './entryPage.css';
 
 export default class EntryPage extends Component {
@@ -71,6 +73,25 @@ export default class EntryPage extends Component {
 							<h3>تماس با ما</h3>
 						</li>
 					</ul>
+				</div>
+				<div className="footer">
+					<div class="rounded-social-buttons">
+						<a class="social-button" href="https://www.facebook.com/" target="_blank">
+							<SocialMediaIconsReact icon="facebook" url="#" />
+						</a>
+						<a class="social-button " href="https://www.twitter.com/" target="_blank">
+							<SocialMediaIconsReact icon="twitter" url="https://twitter.com/your-twitter-handle" />
+						</a>
+						<a class="social-button " href="https://www.linkedin.com/" target="_blank">
+							<SocialMediaIconsReact icon="linkedin" url="https://twitter.com/your-twitter-handle" />
+						</a>
+						<a class="social-button " href="https://www.youtube.com/" target="_blank">
+							<SocialMediaIconsReact icon="youtube" url="https://twitter.com/your-twitter-handle" />
+						</a>
+						<a class="social-button " href="https://www.instagram.com/" target="_blank">
+							<SocialMediaIconsReact icon="instagram" url="https://twitter.com/your-twitter-handle" />
+						</a>
+					</div>
 				</div>
 			</div>
 		);
