@@ -178,13 +178,13 @@ export default function PersistentDrawerLeft(props) {
 						<div style={{ width: 200, marginRight: 10, atextAlign: 'center' }}>
 							{/* <CustomizedSwitches /> */}
 						</div>
-						<Button color="inherit" href="/rtl" style={{ paddingRight: 20 }}>
+						<Button color="inherit" component={Link} to={'/rtl'} style={{ paddingRight: 20 }}>
 							persian
 						</Button>
-						<Button color="inherit" href="/home" style={{ paddingRight: 20 }}>
+						<Button color="inherit" component={Link} to={'/home'} style={{ paddingRight: 20 }}>
 							english
 						</Button>
-						<Button color="inherit" href="/">
+						<Button component={Link} to={'/'} color="inherit">
 							sign out
 						</Button>
 					</div>

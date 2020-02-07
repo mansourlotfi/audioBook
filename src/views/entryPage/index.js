@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { SocialMediaIconsReact } from 'social-media-icons-react';
+import { Link } from 'react-router-dom';
 
 import './entryPage.css';
 
@@ -19,9 +20,12 @@ export default class EntryPage extends Component {
 								<li>امنیت</li>
 								<li>تیم ما</li>
 								<li>نمونه کارها</li>
-								<a href="/home">
+								{/* <a href="/home">
 									<li>ورود به پنل کاربری </li>
-								</a>
+								</a> */}
+								<Link to="/home">
+									<li>ورود به پنل کاربری </li>
+								</Link>
 							</ul>
 						</nav>
 						<div className="container2">
@@ -65,8 +69,8 @@ export default class EntryPage extends Component {
 							<h3>امور حقوقی</h3>
 						</li>
 						<li>
-							<img src={require('../../assets/home/footer/col-2.png')} alt=" پشتیبانی" />
-							<h3> پشتیبانی</h3>
+							<img src={require('../../assets/home/footer/col-2.png')} alt=" اخبار" />
+							<h3> اخبار</h3>
 						</li>
 						<li>
 							<img src={require('../../assets/home/footer/col-1.png')} alt="تماس با ما" />
@@ -77,19 +81,39 @@ export default class EntryPage extends Component {
 				<div className="footer">
 					<div class="rounded-social-buttons">
 						<a class="social-button" href="https://www.facebook.com/" target="_blank">
-							<SocialMediaIconsReact icon="facebook" url="#" />
+							<SocialMediaIconsReact icon="facebook" url="#" size="40" iconSize="7" />
 						</a>
 						<a class="social-button " href="https://www.twitter.com/" target="_blank">
-							<SocialMediaIconsReact icon="twitter" url="https://twitter.com/your-twitter-handle" />
+							<SocialMediaIconsReact
+								icon="twitter"
+								size="40"
+								iconSize="7"
+								url="https://twitter.com/your-twitter-handle"
+							/>
 						</a>
 						<a class="social-button " href="https://www.linkedin.com/" target="_blank">
-							<SocialMediaIconsReact icon="linkedin" url="https://twitter.com/your-twitter-handle" />
+							<SocialMediaIconsReact
+								icon="linkedin"
+								size="40"
+								iconSize="7"
+								url="https://twitter.com/your-twitter-handle"
+							/>
 						</a>
 						<a class="social-button " href="https://www.youtube.com/" target="_blank">
-							<SocialMediaIconsReact icon="youtube" url="https://twitter.com/your-twitter-handle" />
+							<SocialMediaIconsReact
+								icon="youtube"
+								size="40"
+								iconSize="7"
+								url="https://twitter.com/your-twitter-handle"
+							/>
 						</a>
 						<a class="social-button " href="https://www.instagram.com/" target="_blank">
-							<SocialMediaIconsReact icon="instagram" url="https://twitter.com/your-twitter-handle" />
+							<SocialMediaIconsReact
+								icon="instagram"
+								size="40"
+								iconSize="7"
+								url="https://twitter.com/your-twitter-handle"
+							/>
 						</a>
 					</div>
 				</div>

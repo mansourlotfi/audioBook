@@ -459,6 +459,7 @@ nav li:hover {
 	margin-right: 100px;
 	width: 80%;
 	margin: 0 auto;
+	padding-bottom: 100px;
 }
 .containerphoto {
 	float: left;
@@ -478,6 +479,10 @@ nav li:hover {
 	background-color: rgb(165, 156, 156);
 	margin-right: 300px;
 	border-radius: 10px;
+	font-family: 'yekan';
+	font-size: 20px;
+	color: white;
+	padding: 15px;
 }
 
 .buttonContainer {
@@ -524,6 +529,9 @@ nav li:hover {
 }
 
 /* footer */
+.footer {
+	padding-top: 100px;
+}
 
 textarea {
 	resize: none;
@@ -539,8 +547,6 @@ textarea {
 	-ms-transform: translate(-50%, -50%);
 	white-space: nowrap;
 }
-
-@charset "UTF-8";
 
 .svg-inline--fa {
 	vertical-align: -0.200em;
