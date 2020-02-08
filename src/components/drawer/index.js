@@ -21,7 +21,7 @@ import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
 //import CustomizedSwitches from '../switch';
 import { Link } from 'react-router-dom';
-
+import Router from '../../router';
 import './drawer.scss';
 
 const drawerWidth = 240;
@@ -121,6 +121,23 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
+const NamesList = () => (
+	<div>
+		<ul>
+			{Router.map((items, index) => (
+				<Link to={items.path}>
+					<ListItem button>
+						<ListItemIcon>
+							<InboxIcon />
+						</ListItemIcon>
+						<ListItemText primary={items.name} />
+					</ListItem>
+				</Link>
+			))}
+		</ul>
+	</div>
+);
+
 export default function PersistentDrawerLeft(props) {
 	const mystyle = {
 		padding: '10px',
@@ -210,39 +227,8 @@ export default function PersistentDrawerLeft(props) {
 				</div>
 				<Divider />
 				<List>
-					{/* {['page 1', 'page 2', 'page 3', 'page4'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))} */}
-
-					<Link to="/home">
-						<ListItem button>
-							<ListItemIcon>
-								<InboxIcon />
-							</ListItemIcon>
-							<ListItemText primary="home" />
-						</ListItem>
-					</Link>
-
-					<Link to="/dashboard">
-						<ListItem button>
-							<ListItemIcon>
-								<InboxIcon />
-							</ListItemIcon>
-							<ListItemText primary="Dashboard" />
-						</ListItem>
-					</Link>
-
-					<Link to="/about">
-						<ListItem button>
-							<ListItemIcon>
-								<InboxIcon />
-							</ListItemIcon>
-							<ListItemText primary="About" />
-						</ListItem>
-					</Link>
+					{/* imported router file */}
+					<NamesList />
 				</List>
 			</Drawer>
 			<main
