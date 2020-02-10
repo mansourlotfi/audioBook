@@ -4,8 +4,8 @@ import Bg from '../assets/bg.jpg';
 function Home() {
 	const bodyStyle = {
 		backgroundImage: 'url(' + Bg + ')',
-		height: '900px'
-		// paddingTop : '0px',
+		height: '900px',
+		paddingTop: '50px'
 		// marginTop: '0px'
 	};
 	return (

@@ -5,13 +5,13 @@ const Router = [
 		icon: 'InboxIcon'
 	},
 	{
-		path: '/about',
-		name: 'About',
+		path: '/dashboard',
+		name: 'Dashboard',
 		icon: 'InboxIcon'
 	},
 	{
-		path: '/dashboard',
-		name: 'Dashboard',
+		path: '/about',
+		name: 'About',
 		icon: 'InboxIcon'
 	}
 ];

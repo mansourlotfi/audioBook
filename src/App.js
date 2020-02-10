@@ -1,48 +1,38 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { AuthContext } from './context/auth';
+import PrivateRoute from './PrivateRoute';
+
 import './App.scss';
 import Home from './views/home.js';
 import About from './views/about.js';
 import Dashboard from './views/dashboard';
 import EntryPage from './views/entryPage/index.js';
 
-//importing layout
-import HomeLayout from './views/layouts/homeLayout';
-import AuthLayout from './views/layouts/authLayout';
-import RtlLayout from './views/layouts/rtlLayout';
+function App(props) {
+	const [ authTokens, setAuthTokens ] = useState();
+	const setTokens = (data) => {
+		localStorage.setItem('tokens', JSON.stringify(data));
+		setAuthTokens(data);
+	};
 
-const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
-	<Route
-		{...rest}
-		render={(props) => (
-			<Layout>
-				<Component {...props} />
-			</Layout>
-		)}
-	/>
-);
+	return (
+		// <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
+		<AuthContext.Provider value={true}>
+			<Router>
+				{/* authLayout */}
+				<Route path="/" exact component={EntryPage} />
 
-class App extends Component {
-	render() {
-		return (
-			<div>
-				<Router>
-					<Switch>
-						{/* authLayout */}
-						<AppRoute path="/" exact layout={AuthLayout} component={EntryPage} />
+				{/* homelayout */}
+				<PrivateRoute path="/home" component={Home} />
+				<PrivateRoute path="/dashboard" component={Dashboard} />
+				<PrivateRoute path="/about" component={About} />
 
-						{/* homelayout */}
-						<AppRoute path="/home" exact layout={HomeLayout} component={Home} />
-						<AppRoute path="/dashboard" exact layout={HomeLayout} component={Dashboard} />
-						<AppRoute path="/about" exact layout={HomeLayout} component={About} />
-
-						{/* rtlLayout */}
-						<AppRoute path="/rtl" exact layout={RtlLayout} component={Home} />
-					</Switch>
-				</Router>
-			</div>
-		);
-	}
+				{/* rtlLayout */}
+				<PrivateRoute path="/rtl" component={Dashboard} />
+			</Router>
+		</AuthContext.Provider>
+	);
 }
 
 export default App;

@@ -22,6 +22,7 @@ import Button from '@material-ui/core/Button';
 //import CustomizedSwitches from '../switch';
 import { Link } from 'react-router-dom';
 import Router from '../../router';
+import { useAuth } from '../../context/auth';
 import './drawer.scss';
 
 const drawerWidth = 240;
@@ -158,6 +159,12 @@ export default function PersistentDrawerLeft(props) {
 		setOpen(false);
 	};
 
+	//clear tokens
+	// const { setAuthTokens } = useAuth();
+	// function logOut() {
+	// 	setAuthTokens();
+	// }
+
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
@@ -204,6 +211,9 @@ export default function PersistentDrawerLeft(props) {
 						<Button component={Link} to={'/'} color="inherit">
 							sign out
 						</Button>
+						{/* <Button onClick={logOut} color="inherit">
+							sign out
+						</Button> */}
 					</div>
 				</Toolbar>
 			</AppBar>

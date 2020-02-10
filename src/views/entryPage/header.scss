@@ -373,6 +373,45 @@ template {
 	margin: 0 auto;
 }
 
+nav {
+	width: 100%;
+	padding-top: 20px;
+}
+
+a.brand {
+	font-family: 'olivier';
+	font-size: 50px;
+	color: white;
+	text-decoration: none;
+	float: left;
+	transition: all 0.5s ease-in-out;
+}
+
+a.brand:hover {
+	font-weight: 700;
+	font-size: 53px;
+}
+
+nav ul {
+	float: right;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	padding: 0 15px;
+	color: white;
+	font-family: 'yekan';
+	font-size: 30px;
+	transition: all 0.5s ease-in-out;
+}
+
+nav li:hover {
+	cursor: pointer;
+	border-bottom: 3px solid white;
+	padding-bottom: 10px;
+}
+
 .container2 {
 	width: 100%;
 }
@@ -421,70 +460,4 @@ template {
 	width: 80%;
 	margin: 0 auto;
 	padding-bottom: 100px;
-}
-.containerphoto {
-	float: left;
-	padding-left: 100px;
-}
-
-.containerText {
-	align-items: center;
-	overflow: hidden;
-	display: flex;
-}
-.spanText {
-	display: inline-block;
-	width: 90%;
-	overflow: hidden;
-	height: 300px;
-	background-color: rgb(165, 156, 156);
-	margin-right: 300px;
-	border-radius: 10px;
-	font-family: 'yekan';
-	font-size: 20px;
-	color: white;
-	padding: 15px;
-}
-
-.buttonContainer {
-	width: 80%;
-	margin: 0 auto;
-}
-
-.buttonContainer ul {
-	width: 100%;
-	margin-top: 200px;
-	padding: 0;
-	list-style: none;
-}
-
-.buttonContainer ul li {
-	width: 25%;
-	display: inline-block;
-	text-align: center;
-}
-
-.buttonContainer ul li img {
-	width: 170px;
-	height: 170px;
-	border: 1px solid white;
-	border-radius: 90px;
-	background: white;
-}
-
-.buttonContainer ul li img:hover {
-	-webkit-transform: rotate(15deg) scale(1.1);
-	transform: rotate(15deg) scale(1.1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.buttonContainer ul li h3 {
-	font-family: 'yekan';
-	color: white;
-	font-size: 30px;
-}
-
-.buttonContainer ul li h3:hover {
-	transform: scale(1.2);
-	transition: .3s ease-in-out;
 }
