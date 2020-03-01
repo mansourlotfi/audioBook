@@ -19,10 +19,9 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import Button from '@material-ui/core/Button';
-//import CustomizedSwitches from '../switch';
 import { Link } from 'react-router-dom';
 import Router from '../../router';
-import { useAuth } from '../../context/auth';
+//import { useAuth } from '../../context/auth';
 import './drawer.scss';
 
 const drawerWidth = 240;
@@ -199,9 +198,7 @@ export default function PersistentDrawerLeft(props) {
 						/>
 					</div>
 					<div style={mystyle}>
-						<div style={{ width: 200, marginRight: 10, atextAlign: 'center' }}>
-							{/* <CustomizedSwitches /> */}
-						</div>
+						<div style={{ width: 200, marginRight: 10, atextAlign: 'center' }} />
 						<Button color="inherit" component={Link} to={'/rtl'} style={{ paddingRight: 20 }}>
 							persian
 						</Button>

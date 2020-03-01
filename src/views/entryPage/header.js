@@ -13,19 +13,19 @@ export default class Header extends Component {
 					<div className="container">
 						<nav>
 							<a href="/" className="brand">
-								IR-Programmers
+								Audio Books
 							</a>
 							<ul>
 								<li>خانه</li>
-								<li>مشاوره</li>
-								<li>امنیت</li>
-								<li>تیم ما</li>
-								<li>نمونه کارها</li>
+								<li>لیست کتاب ها</li>
+								<li>گوینده ها</li>
+								<li>درباره ما</li>
+								<li>تماس با ما</li>
 								{/* <a href="/home">
 									<li>ورود به پنل کاربری </li>
 								</a> */}
 								{/* <Link to="/home"> */}
-								<li onClick={() => this.setState({ isOpen: true })}>ورود به پنل کاربری </li>
+								<li onClick={() => this.setState({ isOpen: true })}>ورود کاربر </li>
 								{/* </Link> */}
 							</ul>
 							<LoginModal
@@ -33,7 +33,7 @@ export default class Header extends Component {
 								handleClose={() => this.setState({ isOpen: false })}
 							/>
 						</nav>
-						<div className="container2">
+						{/* <div className="container2">
 							<ul>
 								<li>
 									<img src={require('../../assets/home/header/col-4.png')} alt="مشاوره" />
@@ -52,7 +52,7 @@ export default class Header extends Component {
 									<h3>مشارکت</h3>
 								</li>
 							</ul>
-						</div>
+						</div> */}
 					</div>
 				</header>
 			</div>

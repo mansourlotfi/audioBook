@@ -362,7 +362,7 @@ template {
 /* =================== */
 
 .loginBody {
-	background: linear-gradient(rgba(3, 3, 3, 0.6), rgba(3, 3, 3, 0.6)), url(../../assets/Cyberpunk.jpg);
+	background: linear-gradient(rgba(3, 3, 3, 0.6), rgba(3, 3, 3, 0.6)), url(../../assets/mainback.jpg);
 	direction: rtl;
 	/* background-repeat: repeat-y;
 	background-repeat: repeat-x; */

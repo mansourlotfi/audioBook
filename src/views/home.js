@@ -1,5 +1,5 @@
 import React from 'react';
-import Bg from '../assets/bg.jpg';
+import Bg from '../assets/mainback.jpg';
 
 function Home() {
 	const bodyStyle = {
