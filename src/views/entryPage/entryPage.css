@@ -366,6 +366,7 @@ template {
 	direction: rtl;
 	/* background-repeat: repeat-y;
 	background-repeat: repeat-x; */
+	/* background-repeat: repeat-x; */
 }
 
 .container {
@@ -378,23 +379,24 @@ template {
 }
 
 .container2 ul {
-	width: 100%;
-	margin-top: 200px;
-	padding: 0;
+	width: 80%;
+	margin-top: 20px;
+	padding-right: 50px;
 	list-style: none;
 }
 
 .container2 ul li {
-	width: 25%;
+	width: 20%;
 	display: inline-block;
 	text-align: center;
+	padding: 20px;
 }
 
 .container2 ul li img {
 	width: 170px;
 	height: 170px;
 	border: 1px solid white;
-	border-radius: 90px;
+	border-radius: 4px;
 	background: white;
 }
 
@@ -487,4 +489,17 @@ template {
 .buttonContainer ul li h3:hover {
 	transform: scale(1.2);
 	transition: .3s ease-in-out;
+}
+
+/* single line grid */
+.root {
+	display: 'flex';
+	flex-wrap: 'wrap';
+	justify-content: 'space-around';
+	overflow: 'hidden';
+}
+
+.gridList {
+	flex-wrap: 'nowrap';
+	transform: 'translateZ(0)';
 }
