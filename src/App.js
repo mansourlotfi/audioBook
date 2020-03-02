@@ -1,26 +1,40 @@
+//import React, { useState } from 'react';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { AuthContext } from './context/auth';
+import PrivateRoute from './PrivateRoute';
+
+import './App.scss';
+import Home from './views/home.js';
+import About from './views/about.js';
+import Dashboard from './views/dashboard';
+import EntryPage from './views/entryPage/index.js';
+
+function App(props) {
+	// const [ authTokens, setAuthTokens ] = useState();
+	// const setTokens = (data) => {
+	// 	localStorage.setItem('tokens', JSON.stringify(data));
+	// 	setAuthTokens(data);
+	// };
+
+	return (
+		// <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
+		<AuthContext.Provider value={true}>
+			<Router>
+				{/* authLayout */}
+				<Route path="/" exact component={EntryPage} />
+
+				{/* homelayout */}
+				<PrivateRoute path="/home" component={Home} />
+				<PrivateRoute path="/dashboard" component={Dashboard} />
+				<PrivateRoute path="/about" component={About} />
+
+				{/* rtlLayout */}
+				<PrivateRoute path="/rtl" component={Dashboard} />
+			</Router>
+		</AuthContext.Provider>
+	);
 }
 
 export default App;
