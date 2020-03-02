@@ -364,6 +364,7 @@ template {
 .loginBody {
 	background: linear-gradient(rgba(3, 3, 3, 0.6), rgba(3, 3, 3, 0.6)), url(../../assets/mainback.jpg);
 	direction: rtl;
+	min-height: auto;
 	/* background-repeat: repeat-y;
 	background-repeat: repeat-x; */
 	/* background-repeat: repeat-x; */
